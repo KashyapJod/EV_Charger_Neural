@@ -1,0 +1,53 @@
+flowchart TD
+    %% Main process flow
+    Start([Start]) --> InputData[/"Input Data:\n- Geographic boundaries\n- Existing chargers\n- Coverage radius\n- Weights"/]
+    InputData --> LoadHotspots["Load Hotspot Data\n(tourism, commercial, transport)"]
+    LoadHotspots --> BuildNN["Build Neural Network Model"]
+    BuildNN --> GenerateCandidates["Generate Candidate Locations\n(Grid-based with perturbations)"]
+    
+    %% Candidate evaluation process
+    GenerateCandidates --> EvaluateBatch["Batch Evaluation of Candidates"]
+    
+    %% Evaluation details subgraph
+    subgraph "Location Evaluation Process"
+        DistCheck["Quick Distance Check"] --> |"Passed"| PrepareFeatures["Prepare Neural Network Features"]
+        PrepareFeatures --> NNEval["Neural Network Evaluation"]
+        NNEval --> CalculateScores["Calculate Location Scores"]
+        
+        %% Score calculation components
+        CalculateScores --> DistScore["Distance Score"]
+        CalculateScores --> HotspotScore["Hotspot Score"]
+        CalculateScores --> DemandScore["Demand Score"]
+        
+        %% Final scoring
+        DistScore --> |"Combine"| FinalScore["Compute Final Score"]
+        HotspotScore --> |"Combine"| FinalScore
+        DemandScore --> |"Combine"| FinalScore
+    end
+    
+    %% Continue main flow
+    EvaluateBatch --> RankCandidates["Rank Candidates by Score"]
+    RankCandidates --> SelectBest["Select Highest Scoring Candidate"]
+    SelectBest --> AddToSolution["Add to Solution Set"]
+    AddToSolution --> RecalculateScores["Recalculate Remaining Candidate Scores"]
+    
+    %% Decision point
+    RecalculateScores --> EnoughChargers{"Enough\nChargers?"}
+    EnoughChargers --> |"No"| SelectBest
+    EnoughChargers --> |"Yes"| ValidateResults["Validate Results\n(Coverage & Overlap Analysis)"]
+    
+    %% Final efficiency calculation
+    ValidateResults --> CalculateEfficiency["Calculate Network Efficiency"]
+    CalculateEfficiency --> GenerateReport["Generate Final Report with\nCharger Locations & Metrics"]
+    GenerateReport --> End([End])
+    
+    %% Styling
+    classDef process fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef data fill:#bbf,stroke:#333,stroke-width:2px;
+    classDef decision fill:#ff9,stroke:#333,stroke-width:2px;
+    classDef start fill:#9f9,stroke:#333,stroke-width:2px;
+    
+    class Start,End start;
+    class InputData,LoadHotspots data;
+    class EnoughChargers decision;
+    class BuildNN,GenerateCandidates,EvaluateBatch,RankCandidates,SelectBest,AddToSolution,RecalculateScores,ValidateResults,CalculateEfficiency,GenerateReport process;

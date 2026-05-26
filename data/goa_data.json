@@ -1,0 +1,64 @@
+{
+    "urban_centers": [
+        {"name": "Panaji", "lat": 15.4989, "lon": 73.8278, "density": 1.0},
+        {"name": "Margao", "lat": 15.2993, "lon": 73.9837, "density": 0.8},
+        {"name": "Mapusa", "lat": 15.5959, "lon": 73.8151, "density": 0.7},
+        {"name": "Porvorim", "lat": 15.3927, "lon": 73.8033, "density": 0.6},
+        {"name": "Ponda", "lat": 15.4275, "lon": 73.9832, "density": 0.5}
+    ],
+    "major_roads": {
+        "NH66": [
+            {"lat": 15.5, "lon": 73.8},
+            {"lat": 15.4, "lon": 73.85},
+            {"lat": 15.3, "lon": 73.9}
+        ],
+        "NH748": [
+            {"lat": 15.4, "lon": 73.8},
+            {"lat": 15.45, "lon": 73.85},
+            {"lat": 15.5, "lon": 73.9}
+        ]
+    },
+    "water_bodies": {
+        "Zuari_River": [
+            {"lat": 15.38, "lon": 73.85},
+            {"lat": 15.40, "lon": 73.87},
+            {"lat": 15.42, "lon": 73.89},
+            {"lat": 15.38, "lon": 73.91}
+        ],
+        "Mandovi_River": [
+            {"lat": 15.50, "lon": 73.80},
+            {"lat": 15.52, "lon": 73.82},
+            {"lat": 15.51, "lon": 73.85},
+            {"lat": 15.49, "lon": 73.83}
+        ],
+        "Chapora_River": [
+            {"lat": 15.58, "lon": 73.75},
+            {"lat": 15.59, "lon": 73.77},
+            {"lat": 15.57, "lon": 73.79},
+            {"lat": 15.56, "lon": 73.77}
+        ]
+    },
+    "hotspots": {
+        "tourist_spots": [
+            {"lat": 15.50, "lon": 73.83, "weight": 1.0, "name": "Panaji City Center"},
+            {"lat": 15.59, "lon": 73.73, "weight": 0.9, "name": "Anjuna Beach"},
+            {"lat": 15.54, "lon": 73.76, "weight": 0.8, "name": "Calangute Beach"},
+            {"lat": 15.14, "lon": 73.96, "weight": 0.7, "name": "Palolem Beach"},
+            {"lat": 15.30, "lon": 73.90, "weight": 0.6, "name": "Colva Beach"}
+        ],
+        "commercial_areas": [
+            {"lat": 15.48, "lon": 73.82, "weight": 1.0, "name": "Panjim Market"},
+            {"lat": 15.39, "lon": 73.80, "weight": 0.9, "name": "Margao Market"},
+            {"lat": 15.60, "lon": 73.82, "weight": 0.8, "name": "Mapusa Market"}
+        ],
+        "transport_hubs": [
+            {"lat": 15.38, "lon": 73.83, "weight": 1.0, "name": "Goa Airport"},
+            {"lat": 15.42, "lon": 73.79, "weight": 0.9, "name": "Madgaon Railway Station"},
+            {"lat": 15.49, "lon": 73.81, "weight": 0.8, "name": "Panjim Bus Terminal"}
+        ],
+        "industrial_zones": [
+            {"lat": 15.43, "lon": 73.85, "weight": 1.0, "name": "Verna Industrial Estate"},
+            {"lat": 15.38, "lon": 73.88, "weight": 0.9, "name": "Cuncolim Industrial Estate"}
+        ]
+    }
+}

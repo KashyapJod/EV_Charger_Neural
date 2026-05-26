@@ -1,0 +1,107 @@
+{
+    "timestamp": "20260526_161858",
+    "parameters": {
+        "num_chargers": 10,
+        "coverage_radius": 5.0,
+        "bounds": [
+            15.14,
+            15.72,
+            73.71,
+            74.15
+        ],
+        "weights": {
+            "population_density": 0.2,
+            "traffic_flow": 0.25,
+            "points_of_interest": 0.15,
+            "power_availability": 0.15,
+            "charging_demand": 0.1,
+            "accessibility": 0.1,
+            "road_quality": 0.03,
+            "revenue_potential": 0.02
+        }
+    },
+    "existing_chargers": [
+        {
+            "lat": 15.62,
+            "lon": 73.81
+        },
+        {
+            "lat": 15.18,
+            "lon": 73.95
+        },
+        {
+            "lat": 15.38,
+            "lon": 74.1
+        },
+        {
+            "lat": 15.49,
+            "lon": 73.79
+        },
+        {
+            "lat": 15.4,
+            "lon": 73.89
+        }
+    ],
+    "new_chargers": [
+        {
+            "lat": 15.497616903666145,
+            "lon": 73.88994073092927
+        },
+        {
+            "lat": 15.30827817702902,
+            "lon": 73.92346672560801
+        },
+        {
+            "lat": 15.576750104187576,
+            "lon": 73.91030043014415
+        },
+        {
+            "lat": 15.460604805621863,
+            "lon": 73.96958978352255
+        },
+        {
+            "lat": 15.380330509412234,
+            "lon": 73.99170521137854
+        },
+        {
+            "lat": 15.669613253827384,
+            "lon": 73.89696429975358
+        },
+        {
+            "lat": 15.538025190869073,
+            "lon": 73.99482680862114
+        },
+        {
+            "lat": 15.286805481166207,
+            "lon": 74.0066649653757
+        },
+        {
+            "lat": 15.63724156094344,
+            "lon": 73.98278976058054
+        },
+        {
+            "lat": 15.482667340842674,
+            "lon": 74.0576268668575
+        }
+    ],
+    "coverage_stats": {
+        "coverage_pct": 56.11847233047544,
+        "overlap_pct": 0.6079501169134839,
+        "efficiency_pct": 55.777300012332255,
+        "total_area_km2": 1614.7732666509364,
+        "covered_area_km2": 906.1860888454203
+    },
+    "model_efficiency": {
+        "composite_efficiency": 0.49310644454352226,
+        "coverage_efficiency": 19.751426672322705,
+        "coverage_percentage": 21.43409055787359,
+        "overlap_percentage": 7.850409519394221,
+        "computational_efficiency": 0.7951533512905405,
+        "optimization_time": 2.57619047164917,
+        "prediction_consistency": -0.2209834710262671
+    },
+    "timings": {
+        "init_seconds": 0.28162097930908203,
+        "optimization_seconds": 0.31907081604003906
+    }
+}
